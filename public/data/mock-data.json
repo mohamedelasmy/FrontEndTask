@@ -1,0 +1,84 @@
+{
+  "category": "OK",
+  "message": "Zones retrieved successfully",
+  "payload": [
+    {
+      "id": 1,
+      "nameEn": "Main District",
+      "nameAr": "المنطقة الرئيسية",
+      "children": [
+        {
+          "id": 1,
+          "nameEn": "Alnarjis Sub-District",
+          "nameAr": "منطقة النرجس",
+          "children": [
+            {
+              "id": 2,
+              "nameEn": "Alnarjis Block A",
+              "nameAr": "قطاع النرجس أ",
+              "children": []
+            },
+            {
+              "id": 3,
+              "nameEn": "Alnarjis Block B",
+              "nameAr": "قطاع النرجس ب",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nameEn": "Main District1",
+      "nameAr": "المنطقة الرئيسية",
+      "children": [
+        {
+          "id": 2,
+          "nameEn": "Alnarjis Sub-District",
+          "nameAr": "منطقة النرجس",
+          "children": [
+            {
+              "id": 1,
+              "nameEn": "Alnarjis Block A",
+              "nameAr": "قطاع النرجس أ",
+              "children": []
+            },
+            {
+              "id": 4,
+              "nameEn": "Alnarjis Block B",
+              "nameAr": "قطاع النرجس ب",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nameEn": "Main District2",
+      "nameAr": "المنطقة الرئيسية",
+      "children": [
+        {
+          "id": 2,
+          "nameEn": "Al Wadi",
+          "nameAr": "منطقة النرجس",
+          "children": [
+            {
+              "id": 3,
+              "nameEn": "Al Wadi Block A",
+              "nameAr": "قطاع النرجس أ",
+              "children": []
+            },
+            {
+              "id": 4,
+              "nameEn": "Al Wadi Block B",
+              "nameAr": "قطاع النرجس ب",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
