@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./shared/app.layout.component').then(m => m.AppLayoutComponent),
+    loadComponent: () => import('./shared/layout/app.layout.component').then(m => m.AppLayoutComponent),
     children: [
       {
         path: '',

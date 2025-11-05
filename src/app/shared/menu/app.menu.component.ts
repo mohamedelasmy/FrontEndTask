@@ -1,8 +1,9 @@
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutService } from '../core/services/app.layout.service';
-import { AppMenuitemComponent } from './app.menuitem.component';
+import { LayoutService } from '../../core/services/app.layout.service';
+import { AppMenuitemComponent } from './menu-item/app.menuitem.component';
+
 
 @Component({
     selector: 'app-menu',

@@ -58,10 +58,6 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  /**
-   * Fetch data using Promise
-   * Loads data from mock-data.json file
-   */
   private getFilesData(): Promise<TreeNode[]> {
     return new Promise((resolve, reject) => {
       this.http.get<MockDataResponse>('data/mock-data.json').subscribe({

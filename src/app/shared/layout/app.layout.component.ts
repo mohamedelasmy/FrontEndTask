@@ -2,11 +2,11 @@ import { Component, OnDestroy, Renderer2, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
-import { LayoutService } from "../core/services/app.layout.service";
-import { AppSidebarComponent } from "./app.sidebar.component";
-import { AppTopBarComponent } from './app.topbar.component';
-import { AppFooterComponent } from './app.footer.component';
-import { AppConfigComponent } from './config/app.config.component';
+import { LayoutService } from '../../core';
+import { AppConfigComponent } from '../config/app.config.component';
+import { AppFooterComponent } from '../footer/app.footer.component';
+import { AppSidebarComponent } from '../sidebar/app.sidebar.component';
+import { AppTopBarComponent } from '../topbar/app.topbar.component';
 
 @Component({
     selector: 'app-layout',

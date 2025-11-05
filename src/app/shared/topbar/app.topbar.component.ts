@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MenuItem } from 'primeng/api';
-import { LayoutService } from "../core/services/app.layout.service";
+import { LayoutService } from '../../core/services/app.layout.service';
 
 @Component({
     selector: 'app-topbar',

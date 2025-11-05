@@ -3,9 +3,9 @@ import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Subscription } from 'rxjs';
-import { filter } from 'rxjs/operators';
-import { MenuService } from './app.menu.service';
-import { LayoutService } from '../core/services/app.layout.service';
+import { filter } from 'rxjs';
+import { LayoutService } from '../../../core/services/app.layout.service';
+import { MenuService } from '../app.menu.service';
 import { RippleModule } from 'primeng/ripple';
 
 @Component({
@@ -75,7 +75,7 @@ export class AppMenuitemComponent implements OnInit, OnDestroy {
     key: string = "";
 
     constructor(public layoutService: LayoutService, private cd: ChangeDetectorRef, public router: Router, private menuService: MenuService) {
-        this.menuSourceSubscription = this.menuService.menuSource$.subscribe(value => {
+        this.menuSourceSubscription = this.menuService.menuSource$.subscribe((value: any) => {
             Promise.resolve(null).then(() => {
                 if (value.routeEvent) {
                     this.active = (value.key === this.key || value.key.startsWith(this.key + '-')) ? true : false;
