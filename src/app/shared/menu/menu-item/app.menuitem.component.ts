@@ -75,7 +75,7 @@ export class AppMenuitemComponent implements OnInit, OnDestroy {
     key: string = "";
 
     constructor(public layoutService: LayoutService, private cd: ChangeDetectorRef, public router: Router, private menuService: MenuService) {
-        this.menuSourceSubscription = this.menuService.menuSource$.subscribe((value: any) => {
+        this.menuSourceSubscription = this.menuService.menuSource$.subscribe((value) => {
             Promise.resolve(null).then(() => {
                 if (value.routeEvent) {
                     this.active = (value.key === this.key || value.key.startsWith(this.key + '-')) ? true : false;
