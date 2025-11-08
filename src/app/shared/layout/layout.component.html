@@ -1,0 +1,13 @@
+<div class="layout-wrapper">
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar>
+  <!-- Main Content Area -->
+  <div class="layout-main" [class.sidebar-visible]="service.sidebarVisible$ | async">
+    <!-- Topbar -->
+    <app-topbar></app-topbar>
+    <!-- Page Content -->
+    <div class="layout-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

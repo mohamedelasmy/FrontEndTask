@@ -4,10 +4,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-header',
   imports: [CommonModule],
-  templateUrl: './header.html',
-  styleUrl: './header.css',
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css',
   standalone: true
 })
-export class Header {
+export class HeaderComponent {
 
 }

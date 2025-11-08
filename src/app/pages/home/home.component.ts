@@ -26,8 +26,8 @@ interface MockDataResponse {
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, TreeTableModule],
-  templateUrl: './home.html',
-  styleUrl: './home.css'
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
   files: TreeNode[] = [];

@@ -1,0 +1,75 @@
+.layout-topbar {
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #4b5563;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.menu-toggle:hover {
+  background-color: #f9fafb;
+}
+
+/* Show toggle button only on small screens */
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.topbar-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #4b5563;
+  font-size: 1.125rem;
+}
+
+.topbar-button:hover {
+  background-color: #f9fafb;
+}
+
+.topbar-button:nth-child(2) {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.topbar-button:nth-child(2):hover {
+  background-color: #0ea370;
+}
+

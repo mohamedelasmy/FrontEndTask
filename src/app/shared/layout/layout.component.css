@@ -1,0 +1,41 @@
+.layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.layout-main {
+  flex: 1;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+  width: 100%;
+}
+
+.layout-content {
+  padding: 1.5rem;
+  flex: 1;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Small screens: shift when sidebar is visible */
+@media (max-width: 991px) {
+  .layout-main.sidebar-visible {
+    margin-left: 250px;
+  }
+
+  .layout-content {
+    padding: 1rem;
+  }
+}
+
+/* Large screens: always shift when sidebar is visible */
+@media (min-width: 992px) {
+  .layout-main.sidebar-visible {
+    margin-left: 250px;
+  }
+}
+
+
