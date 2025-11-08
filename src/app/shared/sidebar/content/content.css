@@ -1,0 +1,73 @@
+.sidebar-content {
+  padding: 1rem 0;
+  flex: 1;
+}
+
+.menu-section {
+  margin-bottom: 1.5rem;
+}
+
+.menu-section .section-label {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list .menu-item a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  color: #4b5563;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.menu-list .menu-item a i {
+  font-size: 1.125rem;
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+.menu-list .menu-item a span {
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.menu-list .menu-item a:hover {
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.menu-list .menu-item a:hover i {
+  color: #10b981;
+}
+
+.menu-list .menu-item.active a {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.menu-list .menu-item.active a i {
+  color: #10b981;
+}
+
+.menu-list .menu-item.active a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #10b981;
+}

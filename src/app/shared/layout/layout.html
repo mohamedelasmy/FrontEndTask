@@ -1,0 +1,37 @@
+<div class="layout-wrapper">
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar>
+  <!-- Main Content Area -->
+  <div class="layout-main">
+    <!-- Topbar -->
+    <div class="layout-topbar">
+      <button class="menu-toggle" (click)="toggleSidebar()">
+        <i class="pi pi-bars"></i>
+      </button>
+
+      <div class="topbar-actions">
+        <button class="topbar-button" pTooltip="Toggle Dark Mode" tooltipPosition="bottom">
+          <i class="pi pi-moon"></i>
+        </button>
+        <button class="topbar-button" pTooltip="Notifications" tooltipPosition="bottom">
+          <i class="pi pi-dollar"></i>
+        </button>
+        <button class="topbar-button" pTooltip="Calendar" tooltipPosition="bottom">
+          <i class="pi pi-calendar"></i>
+        </button>
+        <button class="topbar-button" pTooltip="Messages" tooltipPosition="bottom">
+          <i class="pi pi-inbox"></i>
+        </button>
+        <button class="topbar-button" pTooltip="Profile" tooltipPosition="bottom">
+          <i class="pi pi-user"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="layout-content">
+      <router-outlet></router-outlet>
+      <!-- Your main content goes here -->
+    </div>
+  </div>
+</div>

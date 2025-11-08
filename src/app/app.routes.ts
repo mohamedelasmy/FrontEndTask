@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./shared/layout/app.layout.component').then(m => m.AppLayoutComponent),
+    loadComponent: () => import('./shared/layout/layout').then(m => m.LayoutComponent),
     children: [
       {
         path: '',
@@ -12,7 +12,7 @@ export const routes: Routes = [
       },
       {
         path: 'zones',
-        loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
+        loadComponent: () => import('./pages/home/home').then(m => m.HomeComponent)
       }
     ]
   },
