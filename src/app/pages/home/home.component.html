@@ -1,42 +1,61 @@
-<div class="card">
-  <!-- Loading state -->
-  @if (loading) {
-    <div class="flex justify-center items-center p-8">
-      <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
-      <span class="ml-3 text-lg">Loading data...</span>
-    </div>
-  }
-
-  <!-- Data table -->
-  @if (!loading) {
-    <p-treetable
-      [value]="files"
-      [columns]="cols"
-      [paginator]="true"
-      [rows]="5"
-      [rowsPerPageOptions]="[5, 10, 25]"
-      [scrollable]="true"
-      [tableStyle]="{ 'min-width': '50rem' }"
-    >
-      <ng-template #header let-columns>
+<div class="tree-table-card">
+  <table class="tree-table">
+    <thead>
+      <tr>
+        <th>Name (English)</th>
+        <th>Name (Arabic)</th>
+        <th>ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (row of pagedRows; track row.id) {
         <tr>
-          @for (col of columns; track col.field) {
-            <th scope="col">{{ col.header }}</th>
-          }
-        </tr>
-      </ng-template>
-      <ng-template #body let-rowNode let-rowData="rowData" let-columns="columns">
-        <tr [ttRow]="rowNode">
-          @for (col of columns; track col.field; let i = $index) {
-            <td>
-              @if (i === 0) {
-                <p-treetable-toggler [rowNode]="rowNode" />
+          <td>
+            <div class="tree-cell" [style.padding-left.px]="(row.level || 0) * 24">
+              @if (hasChildren(row)) {
+                <button class="toggle-btn" (click)="toggleNode(row)">
+                  <span class="toggle-icon" [class.expanded]="row.expanded">▶</span>
+                </button>
+              } @else {
+                <span class="no-toggle"></span>
               }
-              {{ rowData[col.field] }}
-            </td>
-          }
+              {{ row.name }}
+            </div>
+          </td>
+          <td>{{ row.nameAr }}</td>
+          <td>{{ row.id }}</td>
         </tr>
-      </ng-template>
-    </p-treetable>
-  }
+      }
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+  <div class="pagination-container">
+    <div class="pagination-info">
+      Showing {{ startItem }} to {{ endItem }} of {{ visibleRows.length }} entries
+    </div>
+
+    <div class="pagination-controls">
+      <div class="rows-per-page">
+        <label>Rows per page:</label>
+        <select [value]="pageSize" (change)="changePageSize(+$any($event.target).value)">
+          @for (option of pageSizeOptions; track option) {
+            <option [value]="option">{{ option }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="pagination-buttons">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">
+          Previous
+        </button>
+        <span class="page-numbers">
+          Page {{ currentPage }} of {{ totalPages }}
+        </span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
